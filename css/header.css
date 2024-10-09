@@ -1,0 +1,12 @@
+header {
+    padding: 5%;
+    margin: 5%;
+    .container {
+        background-color: #DAA520;
+        display: grid;
+        ul {
+            list-style: none;
+        }
+        
+    }
+}
