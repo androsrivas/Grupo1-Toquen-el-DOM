@@ -1,32 +1,95 @@
-.hdr, .navbar {
-    padding: 25px;
-    margin: 50px; 
-}
-.hdr {
-    background-color: #F2F2F2;
+
+body {
     display: flex;
-    .rrss {
-        background-color: aquamarine;
-        width: 75%;
-    }
-    .lang {
-        background-color: bisque;
-        width: 25%;
+    height: 100vh;
+    .hdr {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
-        img {
-            width: 20px;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100% - 250px); 
+        height: 15vh;
+        padding: 10px;
+        background-color: #F5F5F5;
+        position: fixed;
+        top: 0;
+        left: 250px;
+        z-index: 10;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        .rrss {
+            display: flex;
+            margin-left: 10px;
+            gap: 15px;
+            i {
+                padding: 10px;
+                font-size: 2.5em;
+                color: black;
+            }
+            #ig-icon, #fb-icon, #tt-icon, #yt-icon {
+                background-color: black;
+                color: white;
+                border-radius: 15px;
+                width: 60px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .lang {
+            padding: 2%;
+            img {
+                width: 35px;
+                height: 35px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
         }
     }
-}
-
-.navbar {
-    background-color: #DAA520;
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    ul {
-        list-style: none;
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        background-color: #DAA520;
+        width: 250px;
+        height: 100vh;
+        padding: 20px;
+        position: fixed;
+        .menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 20px;
+            .logo {
+                width: 100%;
+            }
+            .main-menu {
+                list-style-type: none;
+                li {
+                    margin: 10px 0;
+                    font-size: 18px;
+                    cursor: pointer;
+                    position: relative;
+                }
+                .drpdwn-inst {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    padding: 10px;
+                    list-style-type: none;
+                    margin: 0;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                    .drums, .piano, .marimba, .guitar {
+                        padding: 10px;
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                        border-radius: 5px;
+                    }
+                }
+                .dropdown-menu:hover .drpdwn-inst {
+                    display: block;
+                }
+               
+            }
+        }
     }
+
 }

@@ -13,10 +13,10 @@
 <body>
     <header class="hdr">
         <section class="rrss">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-tiktok"></i>
-            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram" id="ig-icon"></i>
+            <i class="fa-brands fa-facebook-f" id="fb-icon"></i>
+            <i class="fa-brands fa-tiktok" id="tt-icon"></i>
+            <i class="fa-brands fa-youtube" id="yt-icon"></i>
         </section>
         <section class="lang">
             <img src="./img/spain-icon.png" alt="Spanish language button">
@@ -25,18 +25,22 @@
     </header>
     <nav class="navbar">
         <section class="menu">
-            <!-- <a href="index.html"><img class="logo" src="./img/Logo v1.png" alt="Logo de Toquen el DOM"></img></a> -->
-            <ul>
-                <li>Inicio</li>
-                <li>Instrumentos</li>
-                    <ul>
-                        <li>Bateria</li>
-                        <li>Piano</li>
-                        <li>Marimba</li>
-                        <li>Guitarra</li>
+            <a href="index.html">
+                <img class="logo" src="./img/Logo v1.png" alt="Logo de Toquen el DOM"></img>
+            </a>
+            <ul class="main-menu">
+                <li class="m-m">Inicio</li>
+                <li class="dropdown-menu">
+                    Instrumentos
+                    <ul class="drpdwn-inst">
+                        <li class="drums" id="drums">Bateria</li>
+                        <li class="piano" id="piano">Piano</li>
+                        <li class="marimba" id="marimba">Marimba</li>
+                        <li class="guitar" id="guitar">Guitarra</li>
                     </ul>
-                <li>Tutoriales</li>
-                <li>Nosotres</li>
+                </li>
+                <li class="m-m">Tutoriales</li>
+                <li class="m-m">Nosotres</li>
             </ul>
         </section>
     </nav>
