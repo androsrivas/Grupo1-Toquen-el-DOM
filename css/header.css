@@ -1,12 +1,32 @@
-header {
-    padding: 5%;
-    margin: 5%;
-    .container {
-        background-color: #DAA520;
-        display: grid;
-        ul {
-            list-style: none;
+.hdr, .navbar {
+    padding: 25px;
+    margin: 50px; 
+}
+.hdr {
+    background-color: #F2F2F2;
+    display: flex;
+    .rrss {
+        background-color: aquamarine;
+        width: 75%;
+    }
+    .lang {
+        background-color: bisque;
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        img {
+            width: 20px;
         }
-        
+    }
+}
+
+.navbar {
+    background-color: #DAA520;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    ul {
+        list-style: none;
     }
 }
