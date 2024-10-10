@@ -70,13 +70,13 @@ body {
                 }
                 .drpdwn-inst {
                     display: none;
-                    position: absolute;
+                    padding-left: 20px;
+                    overflow: hidden;
+                    transition: max-height 0.3s ease-out;
                     left: 0;
                     top: 100%;
-                    padding: 10px;
                     list-style-type: none;
                     margin: 0;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                     .drums, .piano, .marimba, .guitar {
                         padding: 10px;
                         font-size: 16px;
