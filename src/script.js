@@ -1,8 +1,9 @@
 const floorTom = document.querySelector('#floor-tom');
-const floorTomAudio = new Audio('./src/sounds/floor-tom.wav');
 const tom1 = document.querySelector('#tom1');
-const tom1Audio = new Audio ('./src/sounds/tom1.wav');
 const chinaCymbal = document.querySelector("#china-cymbal");
+
+const floorTomAudio = new Audio('./src/sounds/floor-tom.wav');
+const tom1Audio = new Audio ('./src/sounds/tom1.wav');
 const chinaCymbalAudio = new Audio ('./src/sounds/china-cymbal.wav');
 
 // FLOOR TOM
