@@ -1,0 +1,135 @@
+
+.drum-cnt {
+    background-color: #b3abaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* width: 100%; */
+    padding: 1em;
+    .drum {
+        position: relative;
+        width: 50vw; 
+        height: 40vw;
+        max-width: 60em;
+        /* background-color: transparent; */
+        .china-cymbal, .ride-cymbal, .hi-hat {
+            background-color: #d6a02b;
+            border: 0.8em solid #8c6712;
+            border-radius: 50%;
+            position: absolute;
+            text-align: center;
+            color: black;
+            font-size: 0.75em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .snare-drum, .bass-drum, .tom1, .tom2, .floor-tom {
+            background-color: #e1e1e1;
+            border: 0.7em solid #000000;
+            border-radius: 50%;
+            position: absolute;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .china-cymbal {
+            width: 14vw; 
+            height: 14vw;
+            top: 2vw;
+            left: 2vw;
+        }
+        .ride-cymbal {
+            width: 14vw;
+            height: 14vw;
+            top: 2vw;
+            right: 2vw;
+        }
+        .hi-hat {
+            width: 9vw;
+            height: 9vw;
+            bottom: 10vw;
+            left: 2vw;
+        }
+        .snare-drum {
+            width: 11vw;
+            height: 11vw;
+            bottom: 1vw;
+            left: 7vw;
+        }
+        .bass-drum {
+            width: 20vw;
+            height: 20vw;
+            bottom: 2vw;
+            left: calc(50% - 10vw);
+            z-index: 10;
+        }
+        .tom1 {
+            width: 10vw;
+            height: 10vw;
+            top: 12vw;
+            left: calc(50% - 12vw);
+            z-index: 10;
+        }
+        .tom2 {
+            width: 10vw;
+            height: 10vw;
+            top: 12vw;
+            right: calc(50% - 12vw);
+            z-index: 10;
+        }
+        .floor-tom {
+            width: 12vw;
+            height: 12vw;
+            bottom: 1vw;
+            right: 7vw;
+        }
+    }
+}
+
+
+/* Baquetas (drumsticks) */
+/* .baquetas {
+    width: 1vw;
+    height: 10vw;
+    background-color: #a52a2a;
+    position: absolute;
+    bottom: 8vw;
+    left: 4vw;
+    transform: rotate(45deg);
+}
+
+.baquetas::before {
+    content: "";
+    width: 1vw;
+    height: 10vw;
+    background-color: #a52a2a;
+    position: absolute;
+    top: 0;
+    left: -2vw;
+    transform: rotate(-90deg);
+} */
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    .drum {
+        width: 80vw; /* Ajuste del tamaño del set */
+        height: 70vw;
+    }
+
+    .china-cymbal, .ride-cymbal, .hi-hat, .snare-drum, .bass-drum, .tom1, .tom2, .floor-tom {
+        font-size: 0.5em; /* Reducir texto en pantallas más pequeñas */
+    }
+    
+    .baquetas {
+        width: 1.5vw;
+        height: 7vw; /* Ajuste del tamaño de las baquetas */
+    }
+
+    .baquetas::before {
+        width: 1.5vw;
+        height: 7vw;
+    }
+}
