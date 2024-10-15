@@ -5,8 +5,9 @@ function playSnareDrum () {
     snareAudio.play()
 };
 snareDrum.addEventListener("click",playSnareDrum);
-document.addEventListener("keydown", function(event){
+document.addEventListener("keydown", function(event) {
     if(event.key === "s" || event.key === "s"){
         playSnareDrum();
-    }
-});
+    };
+  
+});    
