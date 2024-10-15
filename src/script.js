@@ -1,10 +1,12 @@
 const floorTom = document.querySelector('#floor-tom');
 const tom1 = document.querySelector('#tom1');
 const chinaCymbal = document.querySelector("#china-cymbal");
+const rideCymbal = document.querySelector("#ride-cymbal");
 
 const floorTomAudio = new Audio('./src/sounds/floor-tom.wav');
 const tom1Audio = new Audio ('./src/sounds/tom1.wav');
 const chinaCymbalAudio = new Audio ('./src/sounds/china-cymbal.wav');
+const rideCymbalAudio = new Audio ('./src/sounds/ride-cymbal.wav');
 
 // FLOOR TOM
 function playFloorTom () {
@@ -99,5 +101,37 @@ document.addEventListener("keydown", function (event) {
 document.addEventListener("keyup", function (event) {
     if (event.key === "c" || event.key === "C") {
         deactivateChinaCymbal();
+    }
+});
+
+// RIDE CYMBAL
+function playRideCymbal () {
+    rideCymbalAudio.currentTime = 0;
+    rideCymbalAudio.play();
+}
+
+function activateRideCymbal () {
+    rideCymbal.classList.add("active");
+    playRideCymbal();
+}
+
+function deactivateRideCymbal () {
+    rideCymbal.classList.remove("active");
+}
+
+rideCymbal.addEventListener("click", function () {
+    activateRideCymbal();
+    setTimeout(deactivateChinaCymbal, 200);
+})
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "r" || event.key === "R") {
+        activateRideCymbal();
+    }
+});
+
+document.addEventListener("keyup", function (event) {
+    if (event.key === "r" || event.key === "R") {
+        deactivateRideCymbal();
     }
 });
