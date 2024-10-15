@@ -6,9 +6,28 @@ function playFloorTom () {
     floorTomAudio.play();
 };
 
-floorTom.addEventListener("click", playFloorTom);
+function activateFloorTom () {
+    floorTom.classList.add("active");
+    playFloorTom();
+}
+
+function deactivateFloorTom () {
+    floorTom.classList.remove("active");
+}
+
+floorTom.addEventListener("click", function () {
+    activateFloorTom();
+    setTimeout(deactivateFloorTom, 200);
+});
+
 document.addEventListener("keydown", function (event) {
     if (event.key === "f" || event.key === "F") {
-        playFloorTom();
+        activateFloorTom();
+    }
+});
+
+document.addEventListener("keyup", function (event) {
+    if (event.key === "f" || event.key === "F") {
+        deactivateFloorTom();
     }
 });
