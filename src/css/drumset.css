@@ -12,7 +12,6 @@
         width: 50vw; 
         height: 40vw;
         max-width: 60em;
-        /* background-color: transparent; */
         .china-cymbal, .ride-cymbal, .hi-hat {
             background-color: #d6a02b;
             border: 0.8em solid #8c6712;
@@ -25,6 +24,15 @@
             justify-content: center;
             align-items: center;
         }
+
+        .china-cymbal:hover, .ride-cymbal:hover, .hi-hat:hover {
+            background-color: #bf8a18;
+        }
+
+        #china-cymbal.active, #ride-cymbal.active, #hi-hat.active {
+            background-color: #bf8a18;
+            transform: scale(1.1);
+        }
         .snare-drum, .bass-drum, .tom1, .tom2, .floor-tom {
             background-color: #e1e1e1;
             border: 0.7em solid #000000;
@@ -34,6 +42,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .snare-drum:hover, .bass-drum:hover, .tom1:hover, .tom2:hover, .floor-tom:hover {
+            background-color: #9E6773;
+        }
+        #snare-drum.active, #bass-drum.active, #tom1.active, #tom2.active, #floor-tom.active {
+            background-color: #8A223C;
+            transform: scale(1.1);
         }
         .china-cymbal {
             width: 14vw; 
@@ -74,15 +90,6 @@
             z-index: 10;
         }
 
-        .tom1:hover {
-            background-color: #9E6773;
-        }
-
-        #tom1.active {
-            background-color: #8A223C;
-            transform: scale(1.1);
-        }
-
         .tom2 {
             width: 10vw;
             height: 10vw;
@@ -95,15 +102,6 @@
             height: 12vw;
             bottom: 1vw;
             right: 7vw;
-        }
-
-        .floor-tom:hover {
-            background-color: #9E6773;
-        }
-
-        #floor-tom.active {
-            background-color: #8A223C;
-            transform: scale(1.1);
         }
     }
 }

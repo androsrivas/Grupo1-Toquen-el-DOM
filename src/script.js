@@ -2,6 +2,8 @@ const floorTom = document.querySelector('#floor-tom');
 const floorTomAudio = new Audio('./src/sounds/floor-tom.wav');
 const tom1 = document.querySelector('#tom1');
 const tom1Audio = new Audio ('./src/sounds/tom1.wav');
+const chinaCymbal = document.querySelector("#china-cymbal");
+const chinaCymbalAudio = new Audio ('./src/sounds/china-cymbal.wav');
 
 // FLOOR TOM
 function playFloorTom () {
@@ -64,5 +66,37 @@ document.addEventListener("keydown", function (event) {
 document.addEventListener("keyup", function (event) {
     if (event.key === "t" || event.key === "T") {
         deactivateTom1();
+    }
+});
+
+// CHINA CYMBAL
+function playChinaCymbal () {
+    chinaCymbalAudio.currentTime = 0;
+    chinaCymbalAudio.play();
+}
+
+function activateChinaCymbal () {
+    chinaCymbal.classList.add("active");
+    playChinaCymbal();
+}
+
+function deactivateChinaCymbal () {
+    chinaCymbal.classList.remove("active");
+}
+
+chinaCymbal.addEventListener("click", function () {
+    activateChinaCymbal();
+    setTimeout(deactivateChinaCymbal, 200);
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "c" || event.key === "C") {
+        activateChinaCymbal();
+    }
+});
+
+document.addEventListener("keyup", function (event) {
+    if (event.key === "c" || event.key === "C") {
+        deactivateChinaCymbal();
     }
 });
