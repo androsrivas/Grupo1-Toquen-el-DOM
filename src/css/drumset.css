@@ -75,11 +75,11 @@
         }
 
         .tom1:hover {
-            background-color: rgba(128, 0, 32, 0.4);
+            background-color: #9E6773;
         }
 
         #tom1.active {
-            background-color: rgba(128, 0, 32, 0.8);
+            background-color: #8A223C;
             transform: scale(1.1);
         }
 
@@ -98,11 +98,11 @@
         }
 
         .floor-tom:hover {
-            background-color: rgba(128, 0, 32, 0.4);
+            background-color: #9E6773;
         }
 
         #floor-tom.active {
-            background-color: rgba(128, 0, 32, 0.8);
+            background-color: #8A223C;
             transform: scale(1.1);
         }
     }
