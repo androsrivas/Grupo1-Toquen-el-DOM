@@ -1,5 +1,5 @@
 const floorTom = document.querySelector('#floor-tom');
-const floorTomAudio = new Audio('./src/sounds/tom.wav');
+const floorTomAudio = new Audio('./src/sounds/floor-tom.wav');
 
 function playFloorTom () {
     floorTomAudio.currentTime = 0;
