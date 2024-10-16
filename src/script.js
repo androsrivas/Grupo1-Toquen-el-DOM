@@ -75,8 +75,6 @@ document.addEventListener("keyup", function (event) {
     }
 });
 
-
-
 // TOM 1
 function playTom1 () {
     tom1Audio.currentTime = 0;
@@ -140,7 +138,6 @@ document.addEventListener("keyup", function (event) {
         deactivateTom2();
     }
 });
-
 
 // CHINA CYMBAL
 function playChinaCymbal () {
