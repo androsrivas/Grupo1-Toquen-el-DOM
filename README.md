@@ -40,7 +40,7 @@ O puedes simplemente hacer clic con el mouse en los botones correspondientes a c
 
 ## Autores
 
-- **Andrea Ros** - [GitHub](https://github.com/androsrivas)
 - **Ángel Bas** - [GitHub](https://github.com/AngelB77)
+- **Andrea Ros** - [GitHub](https://github.com/androsrivas)
 - **Lluis Tosso** - [GitHub](https://github.com/lltosso)
  
