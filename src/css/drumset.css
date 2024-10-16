@@ -23,6 +23,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
 
         .china-cymbal:hover, .ride-cymbal:hover, .hi-hat:hover {
@@ -42,6 +43,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
 
         .snare-drum:hover, .bass-drum:hover, .tom1:hover, .tom2:hover, .floor-tom:hover {
@@ -106,49 +108,20 @@
     }
 }
 
-
-
-
-
-
-
-
-/* Baquetas (drumsticks) */
-/* .baquetas {
-    width: 1vw;
-    height: 10vw;
-    background-color: #a52a2a;
-    position: absolute;
-    bottom: 8vw;
-    left: 4vw;
-    transform: rotate(45deg);
-}
-
-.baquetas::before {
-    content: "";
-    width: 1vw;
-    height: 10vw;
-    background-color: #a52a2a;
-    position: absolute;
-    top: 0;
-    left: -2vw;
-    transform: rotate(-90deg);
-} */
-
-/* Media Queries para pantallas pequeñas */
+/* Media Queries */
 @media (max-width: 768px) {
     .drum {
-        width: 80vw; /* Ajuste del tamaño del set */
+        width: 80vw; 
         height: 70vw;
     }
 
     .china-cymbal, .ride-cymbal, .hi-hat, .snare-drum, .bass-drum, .tom1, .tom2, .floor-tom {
-        font-size: 0.5em; /* Reducir texto en pantallas más pequeñas */
+        font-size: 0.5em; 
     }
     
     .baquetas {
         width: 1.5vw;
-        height: 7vw; /* Ajuste del tamaño de las baquetas */
+        height: 7vw; 
     }
 
     .baquetas::before {
