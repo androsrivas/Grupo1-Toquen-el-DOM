@@ -6,9 +6,9 @@ const chinaCymbal = document.querySelector("#china-cymbal");
 const rideCymbal = document.querySelector("#ride-cymbal");
 
 const floorTomAudio = new Audio('./src/sounds/floor-tom.wav');
-const bassDrumAudio = new Audio('./src/sounds/boom.wav');
+const bassDrumAudio = new Audio('./src/sounds/bass-drum.wav');
 const tom1Audio = new Audio ('./src/sounds/tom1.wav');
-const tom2audio = new Audio('./src/sounds/tom.wav');
+const tom2Audio = new Audio('./src/sounds/tom2.wav');
 const chinaCymbalAudio = new Audio ('./src/sounds/china-cymbal.wav');
 const rideCymbalAudio = new Audio ('./src/sounds/ride-cymbal.wav');
 
@@ -33,29 +33,49 @@ floorTom.addEventListener("click", function () {
 });
 
 document.addEventListener("keydown", function (event) {
-    if (event.key === "f" || event.key === "F") {
+    if (event.key === "j" || event.key === "J") {
         activateFloorTom();
     }
 });
 
 document.addEventListener("keyup", function (event) {
-    if (event.key === "f" || event.key === "F") {
+    if (event.key === "j" || event.key === "J") {
         deactivateFloorTom();
     }
 });
 
 // BASS DRUM
-function playbassDrum () {
+function playBassDrum () {
     bassDrumAudio.currentTime = 0;
     bassDrumAudio.play();
 };
+function activateBassDrum () {
+    playBassDrum();
+    bassDrum.classList.add("active");
+}
 
-bassDrum.addEventListener("click", playbassDrum);
+function deactivateBassDrum () {
+    bassDrum.classList.remove("active");
+}
+
+bassDrum.addEventListener("click", function () {
+    activateBassDrum();
+    setTimeout(deactivateBassDrum, 200);
+});
+
 document.addEventListener("keydown", function (event) {
-    if (event.key === "d" || event.key === "d") {
-        playbassDrum();
+    if (event.key === "x" || event.key === "X") {
+        activateBassDrum();
     }
 });
+
+document.addEventListener("keyup", function (event) {
+    if (event.key === "x" || event.key === "X") {
+        deactivateBassDrum();
+    }
+});
+
+
 
 // TOM 1
 function playTom1 () {
@@ -78,27 +98,46 @@ tom1.addEventListener("click", function () {
 });
 
 document.addEventListener("keydown", function (event) {
-    if (event.key === "t" || event.key === "T") {
+    if (event.key === "g" || event.key === "G") {
         activateTom1();
     }
 });
 
 document.addEventListener("keyup", function (event) {
-    if (event.key === "t" || event.key === "T") {
+    if (event.key === "g" || event.key === "G") {
         deactivateTom1();
     }
 });
 
 // TOM 2
 function playtom2 () {
-    tom2audio.currentTime = 0;
-    tom2audio.play();
+    tom2Audio.currentTime = 0;
+    tom2Audio.play();
 };
 
-tom2.addEventListener("click", playtom2);
+function activateTom2 () {
+    tom2.classList.add("active");
+    playTom1();
+}
+
+function deactivateTom2 () {
+    tom2.classList.remove("active");
+}
+
+tom2.addEventListener("click", function () {
+    activateTom2();
+    setTimeout(deactivateTom2, 200);
+});
+
 document.addEventListener("keydown", function (event) {
-    if (event.key === "t" || event.key === "t") {
-        playtom2();
+    if (event.key === "h" || event.key === "H") {
+        activateTom2();
+    }
+});
+
+document.addEventListener("keyup", function (event) {
+    if (event.key === "h" || event.key === "H") {
+        deactivateTom2();
     }
 });
 
@@ -124,13 +163,13 @@ chinaCymbal.addEventListener("click", function () {
 });
 
 document.addEventListener("keydown", function (event) {
-    if (event.key === "c" || event.key === "C") {
+    if (event.key === "y" || event.key === "Y") {
         activateChinaCymbal();
     }
 });
 
 document.addEventListener("keyup", function (event) {
-    if (event.key === "c" || event.key === "C") {
+    if (event.key === "y" || event.key === "Y") {
         deactivateChinaCymbal();
     }
 });
@@ -156,13 +195,13 @@ rideCymbal.addEventListener("click", function () {
 })
 
 document.addEventListener("keydown", function (event) {
-    if (event.key === "r" || event.key === "R") {
+    if (event.key === "u" || event.key === "U") {
         activateRideCymbal();
     }
 });
 
 document.addEventListener("keyup", function (event) {
-    if (event.key === "r" || event.key === "R") {
+    if (event.key === "u" || event.key === "U ") {
         deactivateRideCymbal();
     }
 });
