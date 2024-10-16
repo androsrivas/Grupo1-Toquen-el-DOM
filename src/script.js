@@ -142,14 +142,63 @@ document.addEventListener("keyup", function (event) {
 // SNARE DRUM
 function playSnareDrum () {
     snareAudio.currentTime = 0;
-    snareAudio.play()
-};
+    snareAudio.play();
+}
 
-snareDrum.addEventListener("click",playSnareDrum);
+function activateSnareDrum () {
+    snareDrum.classList.add("active");
+    playSnareDrum();
+}
 
-document.addEventListener("keydown", function(event) {
-    if(event.key === "s" || event.key === "s"){
-        playSnareDrum();
-    };
-  
-});    
+function deactivateSnareDrum () {
+    snareDrum.classList.remove("active");
+}
+
+snareDrum.addEventListener("click", function () {
+    activateSnareDrum();
+    setTimeout(deactivateSnareDrum, 200);
+})
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "s" || event.key === "S") {
+        activateSnareDrum();
+    }
+});
+
+document.addEventListener("keyup", function (event) {
+    if (event.key === "s" || event.key === "S") {
+        deactivateSnareDrum();
+    }
+});
+
+// HI HAT
+function playHiHat() {
+    hiHatAudio.currentTime = 0;
+    hiHatAudio.play();
+}
+
+function activateHiHat () {
+    hiHat.classList.add("active");
+    playHiHat();
+}
+
+function deactivateHiHat () {
+    hiHat.classList.remove("active");
+}
+
+hiHat.addEventListener("click", function () {
+    activateHiHat();
+    setTimeout(deactivateHiHat, 200);
+})
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "e" || event.key === "E") {
+        activateHiHat();
+    }
+});
+
+document.addEventListener("keyup", function (event) {
+    if (event.key === "e" || event.key === "E") {
+        deactivateHiHat();
+    }
+});
