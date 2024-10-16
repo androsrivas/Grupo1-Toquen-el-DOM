@@ -1,5 +1,3 @@
-import 'drumset.js';
-
 const dropdownContent = document.querySelector(".dprdwn-inst");
 
 function dropdownInstrumentsSoftTransition () {
