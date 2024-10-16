@@ -1,10 +1,14 @@
 const floorTom = document.querySelector('#floor-tom');
+const bassDrum = document.querySelector('#bass-drum');
 const tom1 = document.querySelector('#tom1');
+const tom2 = document.querySelector('#tom2');
 const chinaCymbal = document.querySelector("#china-cymbal");
 const rideCymbal = document.querySelector("#ride-cymbal");
 
 const floorTomAudio = new Audio('./src/sounds/floor-tom.wav');
+const bassDrumAudio = new Audio('./src/sounds/boom.wav');
 const tom1Audio = new Audio ('./src/sounds/tom1.wav');
+const tom2audio = new Audio('./src/sounds/tom.wav');
 const chinaCymbalAudio = new Audio ('./src/sounds/china-cymbal.wav');
 const rideCymbalAudio = new Audio ('./src/sounds/ride-cymbal.wav');
 
@@ -40,6 +44,19 @@ document.addEventListener("keyup", function (event) {
     }
 });
 
+// BASS DRUM
+function playbassDrum () {
+    bassDrumAudio.currentTime = 0;
+    bassDrumAudio.play();
+};
+
+bassDrum.addEventListener("click", playbassDrum);
+document.addEventListener("keydown", function (event) {
+    if (event.key === "d" || event.key === "d") {
+        playbassDrum();
+    }
+});
+
 // TOM 1
 function playTom1 () {
     tom1Audio.currentTime = 0;
@@ -71,6 +88,20 @@ document.addEventListener("keyup", function (event) {
         deactivateTom1();
     }
 });
+
+// TOM 2
+function playtom2 () {
+    tom2audio.currentTime = 0;
+    tom2audio.play();
+};
+
+tom2.addEventListener("click", playtom2);
+document.addEventListener("keydown", function (event) {
+    if (event.key === "t" || event.key === "t") {
+        playtom2();
+    }
+});
+
 
 // CHINA CYMBAL
 function playChinaCymbal () {
