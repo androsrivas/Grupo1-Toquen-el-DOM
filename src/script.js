@@ -5,14 +5,16 @@ const tom1 = document.querySelector('#tom1');
 const tom2 = document.querySelector('#tom2');
 const chinaCymbal = document.querySelector("#china-cymbal");
 const rideCymbal = document.querySelector("#ride-cymbal");
+const hiHat = document.querySelector("#hi-hat");
 
 const floorTomAudio = new Audio('./src/sounds/floor-tom.wav');
-const snareAudio = new Audio("./src/sounds/snare.wav");
+const snareAudio = new Audio("./src/sounds/snare-drum.wav");
 const bassDrumAudio = new Audio('./src/sounds/bass-drum.wav');
 const tom1Audio = new Audio ('./src/sounds/tom1.wav');
 const tom2Audio = new Audio('./src/sounds/tom2.wav');
 const chinaCymbalAudio = new Audio ('./src/sounds/china-cymbal.wav');
 const rideCymbalAudio = new Audio ('./src/sounds/ride-cymbal.wav');
+const hiHatAudio = new Audio ('./src/sounds/hi-hat.wav');
 
 // FLOOR TOM
 function playFloorTom () {
@@ -74,6 +76,38 @@ document.addEventListener("keydown", function (event) {
 document.addEventListener("keyup", function (event) {
     if (event.key === "x" || event.key === "X") {
         deactivateBassDrum();
+    }
+});
+
+// SNARE DRUM
+function playSnareDrum () {
+    snareAudio.currentTime = 0;
+    snareAudio.play();
+}
+
+function activateSnareDrum () {
+    snareDrum.classList.add("active");
+    playSnareDrum();
+}
+
+function deactivateSnareDrum () {
+    snareDrum.classList.remove("active");
+}
+
+snareDrum.addEventListener("click", function () {
+    activateSnareDrum();
+    setTimeout(deactivateSnareDrum, 200);
+})
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "s" || event.key === "S") {
+        activateSnareDrum();
+    }
+});
+
+document.addEventListener("keyup", function (event) {
+    if (event.key === "s" || event.key === "S") {
+        deactivateSnareDrum();
     }
 });
 
@@ -202,39 +236,6 @@ document.addEventListener("keydown", function (event) {
 document.addEventListener("keyup", function (event) {
     if (event.key === "u" || event.key === "U ") {
         deactivateRideCymbal();
-    }
-});
-
-
-// SNARE DRUM
-function playSnareDrum () {
-    snareAudio.currentTime = 0;
-    snareAudio.play();
-}
-
-function activateSnareDrum () {
-    snareDrum.classList.add("active");
-    playSnareDrum();
-}
-
-function deactivateSnareDrum () {
-    snareDrum.classList.remove("active");
-}
-
-snareDrum.addEventListener("click", function () {
-    activateSnareDrum();
-    setTimeout(deactivateSnareDrum, 200);
-})
-
-document.addEventListener("keydown", function (event) {
-    if (event.key === "s" || event.key === "S") {
-        activateSnareDrum();
-    }
-});
-
-document.addEventListener("keyup", function (event) {
-    if (event.key === "s" || event.key === "S") {
-        deactivateSnareDrum();
     }
 });
 
