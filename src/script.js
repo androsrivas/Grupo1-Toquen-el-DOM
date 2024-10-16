@@ -13,32 +13,19 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
-const tom1 = document.querySelector('#tom1');
-const tom1Audio = new Audio('./src/sounds/tom.wav');
 
-function playtom1 () {
-    tom1Audio.currentTime = 0;
-    tom1Audio.play();
-};
-
-tom1.addEventListener("click", tom1);
-document.addEventListener("keydown", function (event) {
-    if (event.key === "e" || event.key === "e") {
-        tom1();
-    }
-});
 
 const tom2 = document.querySelector('#tom2');
 const tom2audio = new Audio('./src/sounds/tom.wav');
 
 function playtom2 () {
-    tom2Audio.currentTime = 0;
+    tom2audio.currentTime = 0;
     tom2audio.play();
 };
 
-tom2.addEventListener("click", tom2);
+tom2.addEventListener("click", playtom2);
 document.addEventListener("keydown", function (event) {
     if (event.key === "t" || event.key === "t") {
-        tom2();
+        playtom2();
     }
 });
